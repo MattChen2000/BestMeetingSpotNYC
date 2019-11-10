@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Implementation {
-    private HashMap<Integer, String> AvenueMap;
+    HashMap<Integer, String> AvenueMap;
 
     public Implementation() {
         // Populate a map that relates some of the avenue names in NYC and its index
@@ -22,7 +22,7 @@ public class Implementation {
      * @param Matrix: A matrix representing the streets as rows and avenues as columns in NYC
      * @return an integer array with its first item being the x-coordinate(street) and second being y-coordinate (avenue)
      */
-    public int[] bestMeetingPoint(int[][] Matrix) {
+    int[] bestMeetingPoint(int[][] Matrix) {
         List<Integer> x = new ArrayList<>();
         List<Integer> y = new ArrayList<>();
 
@@ -52,7 +52,7 @@ public class Implementation {
      * @param lo: the lower bound of the sorting window
      * @param hi: the upper bound of the sorting window
      */
-    private void quickSort(List<Integer> L, int lo, int hi){
+    void quickSort(List<Integer> L, int lo, int hi){
         if (lo >= hi) return;
         int left = lo, right = hi;
         int pivot = L.get((left + right) / 2);
@@ -79,7 +79,7 @@ public class Implementation {
      * This helper method prints a matrix to console by reverse order of rows
      * @param M: the matrix to be printed to console
      */
-    public static void printMatrix(int[][] M) {
+    static void printMatrix(int[][] M) {
         for (int i = M.length - 1; i >= 0; i--) {
             for (int j = M[0].length - 1; j >= 0; j--) {
                 if (j != M[0].length - 1) {
