@@ -1,3 +1,5 @@
+package Manhattan;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -5,7 +7,7 @@ import java.util.List;
 public class Implementation {
     HashMap<Integer, String> AvenueMap;
 
-    public Implementation() {
+    Implementation() {
         // Populate a map that relates some of the avenue names in NYC and its index
         AvenueMap= new HashMap<>();
         AvenueMap.put(4, "Lexington Ave");
@@ -52,7 +54,7 @@ public class Implementation {
      * @param lo: the lower bound of the sorting window
      * @param hi: the upper bound of the sorting window
      */
-    void quickSort(List<Integer> L, int lo, int hi){
+    private void quickSort(List<Integer> L, int lo, int hi){
         if (lo >= hi) return;
         int left = lo, right = hi;
         int pivot = L.get((left + right) / 2);
@@ -91,7 +93,7 @@ public class Implementation {
                     System.out.print(M[i][j]);
                 }
             }
-            System.out.println("");
+            System.out.println(" ");
         }
     }
 
